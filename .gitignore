@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Java build output
+*.class
+out/
+bin/
+
+# VS Code local settings
+.vscode/*
+!.vscode/extensions.json
+
+# Temporary files
+*.tmp
+*.temp
+*~
+tempCodeRunnerFile.py
+
+# Archives and personal files kept outside the project
+*.zip
+*.pdf
+java core(roadmap).jpeg
+pythom(roadmap).jpeg
+WhatsApp Image *.jpg
