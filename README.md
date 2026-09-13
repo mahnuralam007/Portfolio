@@ -24,3 +24,5 @@ Then visit `http://localhost:8000/portfolio/`.
 ## Deployment
 
 This repository includes a GitHub Actions workflow that deploys `portfolio/` to GitHub Pages whenever changes are pushed to `main`. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**.
+
+The project is also ready for Vercel. Import the repository into Vercel and leave the project root as `/`; `vercel.json` redirects the domain root to the static portfolio at `/portfolio/`. No build command or environment variables are required.
