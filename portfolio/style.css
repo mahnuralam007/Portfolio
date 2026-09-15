@@ -1305,12 +1305,496 @@ button {
 }
 
 
-.certificate-container {
-    display: grid;
+/* =========================================
+   CERTIFICATES SECTION
+========================================= */
 
-    grid-template-columns: repeat(3, 1fr);
+.certificates-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 5%;
+}
 
-    gap: 20px;
+
+/* =========================
+   HEADER
+========================= */
+
+.certificates-header {
+    text-align: left;
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.certificates-header h2 {
+    font-size: clamp(40px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #1683ff;
+}
+
+.certificates-header h2 span {
+    color: white;
+}
+
+.certificates-header p {
+    color: #aebbd0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.certificates-timeline {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    padding-left: 80px;
+}
+
+
+/* Vertical Line */
+
+.certificates-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 19px;
+
+    top: 30px;
+    bottom: 30px;
+
+    width: 2px;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        #1683ff 0px,
+        #1683ff 6px,
+        transparent 6px,
+        transparent 12px
+    );
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   CERTIFICATE CARD
+========================= */
+
+.certificate-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    padding: 28px;
+
+    border: 1px solid #1e3a5c;
+
+    border-radius: 16px;
+
+    background: rgba(7, 19, 38, 0.65);
+
+    transition: all 0.4s ease;
+}
+
+
+/* Hover */
+
+.certificate-item:hover {
+    transform: translateX(8px);
+
+    border-color: #1683ff;
+
+    background: rgba(10, 28, 55, 0.85);
+
+    box-shadow:
+        0 15px 40px rgba(22, 131, 255, 0.12),
+        0 0 25px rgba(22, 131, 255, 0.06);
+}
+
+
+/* =========================
+   TIMELINE DOT
+========================= */
+
+.certificate-dot {
+    position: absolute;
+
+    left: -71px;
+
+    top: 32px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #1683ff;
+
+    border: 4px solid #071326;
+
+    box-shadow:
+        0 0 0 4px rgba(22, 131, 255, 0.2),
+        0 0 18px rgba(22, 131, 255, 0.8);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.certificate-icon {
+    flex-shrink: 0;
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(22, 131, 255, 0.18),
+        rgba(22, 131, 255, 0.04)
+    );
+
+    border: 1px solid rgba(22, 131, 255, 0.35);
+
+    color: white;
+
+    font-size: 32px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Icon Hover */
+
+.certificate-item:hover .certificate-icon {
+    transform: scale(1.08);
+
+    border-color: #1683ff;
+
+    box-shadow:
+        0 0 20px rgba(22, 131, 255, 0.25);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.certificate-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.certificate-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.certificate-content h3 {
+    color: white;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    margin-bottom: 7px;
+}
+
+
+.certificate-content h4 {
+    color: #9eb7dc;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+
+.certificate-date {
+    color: #8fb5ed;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.certificate-content p {
+    color: #aebbd0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 750px;
+}
+
+
+/* =========================================
+   TABLET — 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .certificates-section {
+        padding: 80px 5%;
+    }
+
+    .certificates-header {
+        margin-bottom: 45px;
+    }
+
+    .certificate-item {
+        padding: 24px;
+    }
+
+    .certificate-content h3 {
+        font-size: 21px;
+    }
+
+    .certificate-content h4 {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP — 700px
+========================================= */
+
+@media (max-width: 700px) {
+
+    .certificates-section {
+        padding: 70px 5%;
+    }
+
+    .certificates-timeline {
+        padding-left: 60px;
+    }
+
+    .certificates-timeline::before {
+        left: 14px;
+    }
+
+    .certificate-dot {
+        left: -56px;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .certificate-item {
+        gap: 18px;
+
+        padding: 22px;
+
+        margin-bottom: 30px;
+    }
+
+    .certificate-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 26px;
+    }
+
+    .certificate-top {
+        gap: 15px;
+    }
+
+    .certificate-content h3 {
+        font-size: 19px;
+    }
+
+    .certificate-content h4 {
+        font-size: 15px;
+    }
+
+    .certificate-content p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   MOBILE — 550px
+========================================= */
+
+@media (max-width: 550px) {
+
+    .certificates-section {
+        padding: 60px 5%;
+    }
+
+    .certificates-header {
+        margin-bottom: 40px;
+    }
+
+    .certificates-header h2 {
+        font-size: 40px;
+    }
+
+    .certificates-header p {
+        font-size: 15px;
+    }
+
+    .certificates-timeline {
+        padding-left: 45px;
+    }
+
+    .certificates-timeline::before {
+        left: 10px;
+
+        top: 20px;
+        bottom: 20px;
+    }
+
+    .certificate-dot {
+        left: -44px;
+
+        top: 25px;
+
+        width: 16px;
+        height: 16px;
+
+        border-width: 3px;
+    }
+
+    .certificate-item {
+        display: block;
+
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+    .certificate-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 18px;
+
+        font-size: 23px;
+
+        border-radius: 12px;
+    }
+
+    .certificate-top {
+        display: block;
+
+        margin-bottom: 12px;
+    }
+
+    .certificate-content h3 {
+        font-size: 18px;
+
+        margin-bottom: 6px;
+    }
+
+    .certificate-content h4 {
+        font-size: 14px;
+
+        margin-bottom: 10px;
+    }
+
+    .certificate-date {
+        display: inline-block;
+
+        font-size: 13px;
+
+        padding: 4px 10px;
+
+        border-radius: 5px;
+
+        background: rgba(22, 131, 255, 0.1);
+
+        border: 1px solid rgba(22, 131, 255, 0.2);
+    }
+
+    .certificate-content p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE — 380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .certificates-section {
+        padding: 50px 4%;
+    }
+
+    .certificates-timeline {
+        padding-left: 38px;
+    }
+
+    .certificates-timeline::before {
+        left: 8px;
+    }
+
+    .certificate-dot {
+        left: -37px;
+
+        width: 14px;
+        height: 14px;
+    }
+
+    .certificate-item {
+        padding: 17px;
+    }
+
+    .certificates-header h2 {
+        font-size: 34px;
+    }
+
+    .certificate-content h3 {
+        font-size: 17px;
+    }
 }
 
 
